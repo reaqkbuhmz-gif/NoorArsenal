@@ -1,7 +1,8 @@
 # 💀🔥 Noor Al-Aarif Security Framework (NASF)
 
-![NASF Dashboard](<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/780da947-998f-4e2a-bb75-7b27fb6026e1" />
-)
+<p align="center">
+  <img width="1366" height="768" alt="NASF Dashboard" src="https://github.com/user-attachments/assets/780da947-998f-4e2a-bb75-7b27fb6026e1">
+</p>
 
 ![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)
 ![Framework](https://img.shields.io/badge/Framework-Flask-red.svg)
@@ -18,7 +19,7 @@
 
 ## 📥 Installation & Quick Start
 
-Follow these commands to deploy the framework instantly:
+Follow these commands to deploy the framework instantly on your terminal:
 
 ### 1. Clone & Enter Directory
 ```bash
