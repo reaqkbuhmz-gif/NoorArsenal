@@ -1,6 +1,7 @@
 # 💀🔥 Noor Al-Aarif Security Framework (NASF)
 
-![NASF Dashboard](image_fbbf6d.png)
+![NASF Dashboard](<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/780da947-998f-4e2a-bb75-7b27fb6026e1" />
+)
 
 ![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)
 ![Framework](https://img.shields.io/badge/Framework-Flask-red.svg)
