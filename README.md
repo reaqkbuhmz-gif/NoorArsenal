@@ -1,18 +1,24 @@
-# Noor Al-Aarif Security Framework 💀🔥
+# 💀🔥 Noor Al-Aarif Security Framework (NASF)
 
-A professional web-based tool for security testing and mass reporting simulation. Engineered for stability, anonymity, and real-time monitoring.
+![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)
+![Framework](https://img.shields.io/badge/Framework-Flask-red.svg)
+![OS](https://img.shields.io/badge/OS-Parrot%20/%20Kali-green.svg)
 
-## 🚀 Features
-* **Matrix GUI:** High-performance web interface with digital rain effect.
-* **Auto-Proxy:** Integrated with ProxyScrape API for global node rotation.
-* **Live Logs:** Real-time logging of every signal sent with timestamp and IP.
-* **Smart Surveillance:** Automated status checking for the target.
-* **Audio Alerts:** Voice notifications upon mission completion.
+**NASF** is a professional, web-based security testing and reporting simulation tool. It features a high-end Matrix-style GUI, integrated proxy rotation, and real-time monitoring. Engineered for researchers and security practitioners.
 
-## 🛠️ Installation
-1. Clone the repository: `git clone https://github.com/YOUR_USER/NoorArsenal.git`
-2. Install dependencies: `pip install flask requests`
-3. Run the engine: `python3 run.py`
+---
 
-## ⚖️ Disclaimer
-This tool is for educational purposes and ethical security testing only. Developed & Engineered by Mr Noor Al-Aarif 💀🔥.
+## 🛠️ System Requirements
+To run this framework with maximum efficiency on your Linux environment, ensure you have:
+* **Python 3.x** installed.
+* **Flask**: For the web server and dashboard.
+* **Requests**: For handling proxy connections and signal injections.
+
+## 📥 Installation & Setup
+
+### 1. Clone the Repository
+```bash
+git clone [https://github.com/reaqkbuhmz-gif/NoorArsenal.git](https://github.com/reaqkbuhmz-gif/NoorArsenal.git)
+cd NoorArsenal
+pip3 install flask requests
+python3 run.py
