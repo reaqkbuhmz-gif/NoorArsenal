@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Noor Al-Aarif Security Framework 💀🔥</title>
+    <style>
+        body { background: #000; color: #0f0; font-family: 'Courier New', monospace; margin: 0; overflow-x: hidden; text-align: center; }
+        canvas { position: absolute; top: 0; left: 0; z-index: -1; }
+        .container { position: relative; z-index: 1; padding: 20px; background: rgba(0,0,0,0.8); min-height: 100vh; }
+        .panel { border: 2px solid #0f0; padding: 15px; display: inline-block; background: rgba(0,20,0,0.9); box-shadow: 0 0 15px #0f0; }
+        input { background: #000; color: #0f0; border: 1px solid #0f0; padding: 5px; text-align: center; }
+        button { background: #f00; color: #fff; border: none; padding: 10px; cursor: pointer; font-weight: bold; }
+        .log-table { width: 80%; margin: 20px auto; border-collapse: collapse; background: rgba(0,10,0,0.9); font-size: 0.9em; }
+        .log-table td { border: 1px solid #333; padding: 5px; text-align: left; }
+    </style>
+</head>
+<body>
+    <canvas id="matrix"></canvas>
+    <div class="container">
+        <h1>NOOR AL-AARIF SECURITY FRAMEWORK 💀🔥</h1>
+        <div class="panel">
+            <form action="/start" method="post">
+                TARGET USERNAME: <input type="text" name="user" placeholder="Enter Username here..." required>
+                REPORTS COUNT: <input type="number" name="count" value="1000">
+                <button type="submit">START SECURITY TEST</button>
+            </form>
+        </div>
+        <div style="margin-top:20px;">
+            <h3>SYSTEM STATUS: <span id="sts" style="color:red;">Ready</span></h3>
+            <h4>SIGNALS: <span id="rpt">0</span> / <span id="total">1000</span> | NODES: <span id="nodes">0</span></h4>
+        </div>
+        <table class="log-table" id="log-body"></table>
+    </div>
+    <script>
+        const canvas = document.getElementById('matrix'); const ctx = canvas.getContext('2d');
+        canvas.width = window.innerWidth; canvas.height = window.innerHeight;
+        const letters = "0123456789ABCDEF"; const fontSize = 16;
+        const columns = canvas.width / fontSize; const drops = Array(Math.floor(columns)).fill(1);
+        function draw() { ctx.fillStyle = "rgba(0, 0, 0, 0.05)"; ctx.fillRect(0, 0, canvas.width, canvas.height); ctx.fillStyle = "#0f0"; ctx.font = fontSize + "px monospace"; for (let i = 0; i < drops.length; i++) { const text = letters.charAt(Math.floor(Math.random() * letters.length)); ctx.fillText(text, i * fontSize, drops[i] * fontSize); if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) drops[i] = 0; drops[i]++; } }
+        setInterval(draw, 33);
+
+        let spoken = false;
+        setInterval(() => {
+            fetch("/api/stats").then(r => r.json()).then(data => {
+                document.getElementById("sts").innerText = data.status;
+                document.getElementById("rpt").innerText = data.reports;
+                document.getElementById("nodes").innerText = data.nodes;
+                let logHtml = "";
+                data.logs.forEach(log => { logHtml += `<tr><td>${log}</td></tr>`; });
+                document.getElementById("log-body").innerHTML = logHtml;
+
+                if (data.status === "⚠️ TARGET OFFLINE" && !spoken) {
+                    let msg = new SpeechSynthesisUtterance("Target Offline. Security Check Complete.");
+                    window.speechSynthesis.speak(msg);
+                    spoken = true;
+                }
+            });
+        }, 1000);
+    </script>
+</body>
+</html>
