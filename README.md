@@ -18,7 +18,7 @@ To run this framework with maximum efficiency on your Linux environment, ensure 
 
 ### 1. Clone the Repository
 ```bash
-git clone [https://github.com/reaqkbuhmz-gif/NoorArsenal.git](https://github.com/reaqkbuhmz-gif/NoorArsenal.git)
+git clone https://github.com/reaqkbuhmz-gif/NoorArsenal.git
 cd NoorArsenal
 pip3 install flask requests
 python3 run.py
